@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elegance Premium Beauty Salon | Jaspur</title>
+<meta name="description" content="Elegance Premium Beauty Salon in Jaspur — premium beauty, hair and bridal services in a luxurious setting.">
+<style>
+:root{--ink:#151311;--cream:#f5efe6;--gold:#c7a66a;--muted:#b9afa2;--card:#211e1a}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,Arial,sans-serif;background:var(--ink);color:#fff;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;padding:20px 5%;display:flex;justify-content:space-between;align-items:center;background:linear-gradient(#0b0a09cc,transparent)}
+.logo{font-family:Georgia,serif;font-size:24px;letter-spacing:2px}.logo span{color:var(--gold)}
+.navlinks{display:flex;gap:25px;font-size:13px;text-transform:uppercase;letter-spacing:1.4px}.navlinks a:hover{color:var(--gold)}
+.btn{display:inline-block;padding:14px 22px;border:1px solid var(--gold);color:#fff;letter-spacing:1px;text-transform:uppercase;font-size:12px;transition:.3s}.btn:hover{background:var(--gold);color:#151311}
+.hero{min-height:100vh;display:grid;place-items:center;position:relative;background:radial-gradient(circle at 70% 35%,#6e5a3a 0,#29231c 28%,#0d0c0b 70%)}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#0b0a09ee 0%,#0b0a0988 45%,#0b0a0922),url('https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1800&q=85') center/cover;opacity:.72}
+.hero-inner{position:relative;z-index:2;width:min(1100px,90%);padding-top:90px}
+.kicker{color:var(--gold);letter-spacing:4px;text-transform:uppercase;font-size:12px;margin-bottom:20px}
+h1{font:clamp(56px,9vw,120px)/.9 Georgia,serif;font-weight:400;max-width:800px}
+.hero p{max-width:560px;color:#ded5ca;margin:28px 0;font-size:18px;line-height:1.7}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.section{padding:100px 7%}.eyebrow{color:var(--gold);text-transform:uppercase;letter-spacing:3px;font-size:11px;margin-bottom:14px}
+h2{font:clamp(38px,5vw,68px) Georgia,serif;font-weight:400;margin-bottom:20px}.lead{color:#cfc5ba;max-width:680px;line-height:1.7}
+.services{background:var(--cream);color:var(--ink)}.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:45px}
+.card{background:#fff;padding:30px;min-height:250px;border-bottom:2px solid var(--gold);position:relative;overflow:hidden}.card h3{font:30px Georgia,serif;margin:55px 0 12px}.card p{color:#665e55;line-height:1.6}.num{position:absolute;right:25px;top:22px;color:#d7c6a7;font:32px Georgia,serif}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}.about-img{height:600px;background:url('https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=1100&q=85') center/cover}.about-copy p{color:#cfc5ba;line-height:1.8;margin:20px 0}.stats{display:flex;gap:40px;margin-top:30px}.stat strong{display:block;font:38px Georgia,serif;color:var(--gold)}.stat span{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#aaa}
+.gallery{background:#11100f}.gallery-grid{display:grid;grid-template-columns:1.4fr .8fr .8fr;grid-auto-rows:240px;gap:12px;margin-top:40px}.gallery-grid div{background-size:cover;background-position:center;filter:saturate(.8)}.g1{grid-row:span 2;background-image:url('https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1000&q=85')}.g2{background-image:url('https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=800&q=85')}.g3{background-image:url('https://images.unsplash.com/photo-1605497788044-5a32c7078486?auto=format&fit=crop&w=800&q=85')}.g4{background-image:url('https://images.unsplash.com/photo-1599351431202-1e0f0d8f9f0a?auto=format&fit=crop&w=800&q=85')}.g5{background-image:url('https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=800&q=85')}
+.reviews{background:#181613}.review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}.review{padding:30px;background:#24211d;border:1px solid #3b342b}.stars{color:var(--gold);letter-spacing:4px}.review p{margin:20px 0;line-height:1.7;color:#ddd}.review small{color:#9f9589}
+.contact{background:var(--cream);color:var(--ink);display:grid;grid-template-columns:1fr 1fr;gap:60px}.contact p{color:#665e55;line-height:1.8}.contact-box{background:#fff;padding:35px}.contact-row{padding:18px 0;border-bottom:1px solid #ddd}.contact-row b{display:block;text-transform:uppercase;font-size:11px;letter-spacing:1px;color:#8d7550;margin-bottom:5px}
+.footer{padding:30px 7%;display:flex;justify-content:space-between;color:#8e867d;font-size:12px;border-top:1px solid #302c27}
+@media(max-width:800px){.navlinks{display:none}.service-grid,.review-grid,.about,.contact{grid-template-columns:1fr}.about-img{height:420px}.gallery-grid{grid-template-columns:1fr 1fr;grid-auto-rows:180px}.g1{grid-row:span 2}.section{padding:75px 6%}}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <a class="logo" href="#home">ELEGANCE <span>•</span></a>
+  <div class="navlinks"><a href="#services">Services</a><a href="#about">About</a><a href="#gallery">Gallery</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a></div>
+  <a class="btn" href="#contact">Book Appointment</a>
+</nav>
+
+<header class="hero" id="home">
+  <div class="hero-inner">
+    <div class="kicker">Premium Beauty Salon · Jaspur</div>
+    <h1>Beauty, styled with intention.</h1>
+    <p>Discover a refined salon experience where modern beauty meets timeless elegance — from signature hair styling to bridal glam.</p>
+    <div class="hero-actions"><a class="btn" href="#contact">Book Your Visit</a><a class="btn" href="#services">Explore Services</a></div>
+  </div>
+</header>
+
+<section class="section services" id="services">
+  <div class="eyebrow">Our services</div><h2>Designed around you.</h2><p class="lead">A curated menu of beauty services for everyday confidence, special occasions and unforgettable bridal moments.</p>
+  <div class="service-grid">
+    <article class="card"><span class="num">01</span><h3>Hair Studio</h3><p>Precision cuts, styling, blowouts, colour and occasion-ready transformations.</p></article>
+    <article class="card"><span class="num">02</span><h3>Skin & Glow</h3><p>Relaxing facial and beauty rituals designed to leave you feeling refreshed and radiant.</p></article>
+    <article class="card"><span class="num">03</span><h3>Bridal Glam</h3><p>Complete bridal beauty planning with elegant hair, makeup and finishing touches.</p></article>
+    <article class="card"><span class="num">04</span><h3>Makeup</h3><p>Polished looks for parties, celebrations, shoots and memorable evenings.</p></article>
+    <article class="card"><span class="num">05</span><h3>Nails</h3><p>Clean, sophisticated nail styling to complete your look from fingertips to toes.</p></article>
+    <article class="card"><span class="num">06</span><h3>Beauty Care</h3><p>Thoughtful grooming and finishing services tailored to your personal style.</p></article>
+  </div>
+</section>
+
+<section class="section about" id="about">
+  <div class="about-img"></div>
+  <div class="about-copy"><div class="eyebrow">The experience</div><h2>Your time. Your transformation.</h2><p>Elegance Premium Beauty Salon is presented here as a modern, welcoming destination in Jaspur, built around personal service and polished results.</p><p>Every appointment should feel like a reset: unhurried, detail-focused and tailored to you.</p>
+  <div class="stats"><div class="stat"><strong>01</strong><span>Personal approach</span></div><div class="stat"><strong>02</strong><span>Modern styling</span></div><div class="stat"><strong>03</strong><span>Special occasions</span></div></div></div>
+</section>
+
+<section class="section gallery" id="gallery"><div class="eyebrow">Visual journal</div><h2>Made to be remembered.</h2><p class="lead">A cinematic look at the kind of beauty experience this salon website is designed to showcase.</p>
+<div class="gallery-grid"><div class="g1"></div><div class="g2"></div><div class="g3"></div><div class="g4"></div><div class="g5"></div></div></section>
+
+<section class="section reviews" id="reviews"><div class="eyebrow">Client love</div><h2>Moments worth sharing.</h2><div class="review-grid">
+<div class="review"><div class="stars">★★★★★</div><p>“A beautiful, calm experience from start to finish. The attention to detail really stands out.”</p><small>— Recent client</small></div>
+<div class="review"><div class="stars">★★★★★</div><p>“Loved the styling and the overall salon experience. I left feeling completely refreshed.”</p><small>— Recent client</small></div>
+<div class="review"><div class="stars">★★★★★</div><p>“Professional, welcoming and focused on getting the look just right.”</p><small>— Recent client</small></div>
+</div></section>
+
+<section class="section contact" id="contact"><div><div class="eyebrow">Visit us</div><h2>Ready for your next look?</h2><p>Use the details below to contact the salon and confirm availability before your visit.</p><br><a class="btn" style="background:#151311" href="https://www.google.com/maps/search/?api=1&query=Elegance%20Premium%20Beauty%20Salon%2C%20Jaspur%2C%20Uttarakhand" target="_blank">Open in Google Maps</a></div>
+<div class="contact-box"><div class="contact-row"><b>Salon</b>Elegance Premium Beauty Salon</div><div class="contact-row"><b>Location</b>Old Hospital Road, near Holi Chock, Jaspur, Uttarakhand 244712</div><div class="contact-row"><b>Appointment</b>Call or message the salon to confirm your preferred time.</div><div class="contact-row"><b>Website note</b>Demo concept — replace placeholder contact details, prices and reviews with verified salon information before publishing.</div></div></section>
+
+<footer class="footer"><span>© 2026 Elegance Premium Beauty Salon</span><span>Luxury beauty, thoughtfully presented.</span></footer>
+</body>
+</html>
